@@ -159,8 +159,8 @@ button {
 
 .btn-primary.disabled,
 .btn-primary:disabled {
-  background-color: #f18024;
-  border-color: #f18024;
+  background-color: #42b983;
+  border-color: #42b983;
   color: #fff;
 }
 
