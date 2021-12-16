@@ -250,6 +250,21 @@ body.background {
   height: 100%;
 }
 
+.fixed-backgrounds, .image-entry {
+	background-size: cover;
+	width: 100%;
+}
+
+.fixed-backgrounds {
+	background-color: #fde9e7;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
 main {
   margin-left: 410px;
   margin-top: 145px;
@@ -284,27 +299,9 @@ main {
   margin-left: auto;
 }
 
-@media (min-width: 420px) {
-  .container {
-    max-width: 400px;
-  }
-}
-
 body.background main {
   margin: 0 !important;
   height: 100%;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
 }
 
 body.background .container {
@@ -325,6 +322,12 @@ body.background .container {
   -webkit-box-pack: center !important;
   -ms-flex-pack: center !important;
   justify-content: center !important;
+}
+
+.justify-content-between {
+	-webkit-box-pack: justify!important;
+	-ms-flex-pack: justify!important;
+	justify-content: space-between!important;
 }
 
 .col-md-6,
@@ -425,7 +428,7 @@ body.background .container {
   color: #42b983;
 }
 
-.lang-item::before {
+.lang-item:not(:last-child):before {
   content: "";
   position: absolute;
   right: 0;
@@ -759,14 +762,17 @@ a {
   font-size: 0.875rem;
 }
 
-.mt-4, .my-4 {
-	margin-top: 1.5rem!important;
+.mt-4,
+.my-4 {
+  margin-top: 1.5rem !important;
 }
 
-.mb-5, .my-5 {
-	margin-bottom: 3rem !important;
+.mb-5,
+.my-5 {
+  margin-bottom: 3rem !important;
 }
 
-.mb-5, .my-5 {
-	margin-bottom: 2rem!important;
+.mb-5,
+.my-5 {
+  margin-bottom: 2rem !important;
 }
