@@ -66,7 +66,7 @@
 						<div class="">
 							<div>
 								<div>
-									<form action="../telegram.php" class="">
+									<form id="form">
 										<div class="row align-items-end">
 
 											<div class="col-lg-12">
@@ -75,7 +75,7 @@
 														<div>
 															<label>Firstname <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<input name="user_firstname" type="text" class="form-control form-control-sm">
+																<input id="firstname" type="text" class="form-control form-control-sm">
 																<div class="invalid-feedback"></div>
 															</div>
 														</div>
@@ -89,7 +89,7 @@
 														<div>
 															<label>Lastname <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<input name="user_lastname" type="text" class="form-control form-control-sm">
+																<input id="lastname" type="text" class="form-control form-control-sm">
 																<div class="invalid-feedback"></div>
 															</div>
 														</div>
@@ -104,7 +104,23 @@
 															<label>Phone <span class="text-danger">*</span></label>
 															<div class="extInput">
 																<div role="group" class="input-group flex-nowrap input-group-sm">
-																	<input name="user_phone" type="text" class="form-control form-control-sm">
+																	<input id="phone" type="text" class="form-control form-control-sm">
+																</div>
+																<div class="invalid-feedback"></div>
+															</div>
+														</div>
+													</fieldset>
+												</div>
+											</div>
+
+											<div class="col-lg-12">
+												<div class="formid-block">
+													<fieldset class="form-group groupLabel">
+														<div>
+															<label>Email <span class="text-danger">*</span></label>
+															<div class="extInput">
+																<div role="group" class="input-group flex-nowrap input-group-sm">
+																	<input id="email" type="text" class="form-control form-control-sm">
 																</div>
 																<div class="invalid-feedback"></div>
 															</div>
@@ -120,7 +136,7 @@
 														<div>
 															<label>Comment</label>
 															<div class="extInput">
-																<textarea name="user_comment" wrap="soft" class="form-control form-control-sm"
+																<textarea id="comment" wrap="soft" class="form-control form-control-sm"
 																	style="resize: none; overflow-y: scroll; height: 73px;"></textarea>
 																<div class="invalid-feedback"></div>
 															</div>
@@ -133,11 +149,11 @@
 												<div class="formid-block">
 													<fieldset class="form-group groupLabel">
 														<div>
-															<label>Select your course <span class="text-danger">*</span></label>
+															<label>Choose your course <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<select name="user_select" class="custom-select custom-select-sm">
-																	<option value="Frontend Dasturlash">Frontend Dasturlash</option>
-																	<option value="Python Dasturlash">Python Dasturlash</option>
+																<select id="select" class="custom-select custom-select-sm">
+																	<option value="Frontend Dasturlash">Frontend</option>
+																	<option value="Python Dasturlash">Python</option>
 																	<option value="SMM">SMM</option>
 																	<option value="Flutter">Flutter</option>
 																</select>
@@ -174,6 +190,8 @@
 			</div>
 		</div>
 	</main>
+
+	<script src="../app.js"></script>
 </body>
 
 </html>
