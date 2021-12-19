@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>IT-Labs Programming Academy</title>
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="media.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/media.css">
 </head>
 
 <body class="background">
@@ -34,7 +34,7 @@
 							<div class="d-flex align-items-center justify-content-between">
 								<div class="lead-form-title">O'quv markaziga so'rov qoldiring</div>
 								<a class="active" href="/">
-									<img class="logo-lg" src="logo-itlabs.JPG" alt="IT-Labs Programming Academy">
+									<img class="logo-lg" src="images/logo-itlabs.JPG" alt="IT-Labs Programming Academy">
 								</a>
 							</div>
 							<div class="editor-form-text">
@@ -66,32 +66,44 @@
 						<div class="">
 							<div>
 								<div>
-									<form action="" class="">
+									<form action="/actions/send.php" method="POST">
 										<div class="row align-items-end">
 											<div class="col-lg-12">
 												<div class="formid-block">
 													<fieldset class="form-group groupLabel">
 														<div>
-															<label for="">Ism va Familiya <span class="text-danger">*</span></label>
+															<label>Ism <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<input id="name" type="text" class="form-control form-control-sm">
+																<input name="user_firstname" type="text" class="form-control form-control-sm">
 																<div class="invalid-feedback"></div>
 															</div>
 														</div>
 													</fieldset>
 												</div>
 											</div>
+
 											<div class="col-lg-12">
 												<div class="formid-block">
 													<fieldset class="form-group groupLabel">
 														<div>
-															<label for="">Telefon <span class="text-danger">*</span></label>
+															<label>Familiya <span class="text-danger">*</span></label>
+															<div class="extInput">
+																<input name="user_lastname" type="text" class="form-control form-control-sm">
+																<div class="invalid-feedback"></div>
+															</div>
+														</div>
+													</fieldset>
+												</div>
+											</div>
+
+											<div class="col-lg-12">
+												<div class="formid-block">
+													<fieldset class="form-group groupLabel">
+														<div>
+															<label>Telefon <span class="text-danger">*</span></label>
 															<div class="extInput">
 																<div role="group" class="input-group flex-nowrap input-group-sm">
-																	<div class="input-group-prepend">
-																		<div class="input-group-text">+998</div>
-																	</div>
-																	<input id="phone" type="text" class="form-control form-control-sm">
+																	<input name="user_phone" type="text" class="form-control form-control-sm">
 																</div>
 																<div class="invalid-feedback"></div>
 															</div>
@@ -99,12 +111,30 @@
 													</fieldset>
 												</div>
 											</div>
+
 											<div class="col-lg-12">
 												<div class="formid-block">
 													<fieldset class="form-group groupLabel">
-														<div><label>Izoh</label>
+														<div>
+															<label>Email <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<textarea id="comment" wrap="soft" class="form-control form-control-sm"
+																<div role="group" class="input-group flex-nowrap input-group-sm">
+																	<input name="user_email" type="text" class="form-control form-control-sm">
+																</div>
+																<div class="invalid-feedback"></div>
+															</div>
+														</div>
+													</fieldset>
+												</div>
+											</div>
+
+											<div class="col-lg-12">
+												<div class="formid-block">
+													<fieldset class="form-group groupLabel">
+														<div>
+															<label>Izoh</label>
+															<div class="extInput">
+																<textarea name="user_comment" wrap="soft" class="form-control form-control-sm"
 																	style="resize: none; overflow-y: scroll; height: 73px;"></textarea>
 																<div class="invalid-feedback"></div>
 															</div>
@@ -119,7 +149,7 @@
 														<div>
 															<label>Kursingizni tanlang <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<select class="custom-select custom-select-sm">
+																<select class="custom-select custom-select-sm" name="user_select">
 																	<option value="Frontend Dasturlash">Frontend Dasturlash</option>
 																	<option value="Python Dasturlash">Python Dasturlash</option>
 																	<option value="SMM">SMM</option>
@@ -135,14 +165,16 @@
 											<div class="col-lg-12">
 												<fieldset class="form-group">
 													<div>
-														<button type="submit" disabled="disabled" class="btn btn-primary btn-sm disabled">
+														<button type="submit" class="btn btn-primary btn-sm">
 															<div>
 																Yuborish
 															</div>
 														</button>
+														<p class="contact-form__message"></p>
 													</div>
 												</fieldset>
 											</div>
+
 										</div>
 									</form>
 								</div>
@@ -157,6 +189,9 @@
 			</div>
 		</div>
 	</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/telegramform.js"></script>
 </body>
 
 </html>

@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>IT-Labs Programming Academy</title>
-	<link rel="stylesheet" href="../styles.css">
-	<link rel="stylesheet" href="../media.css">
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/media.css">
 </head>
 
 <body class="background">
@@ -34,7 +34,7 @@
 							<div class="d-flex align-items-center justify-content-between">
 								<div class="lead-form-title">Leave a request to the training center</div>
 								<a class="active" href="/">
-									<img class="logo-lg" src="../logo-itlabs.JPG" alt="IT-Labs Programming Academy">
+									<img class="logo-lg" src="../images/logo-itlabs.JPG" alt="IT-Labs Programming Academy">
 								</a>
 							</div>
 							<div class="editor-form-text">
@@ -66,32 +66,45 @@
 						<div class="">
 							<div>
 								<div>
-									<form action="" class="">
+									<form action="../telegram.php" class="">
 										<div class="row align-items-end">
+
 											<div class="col-lg-12">
 												<div class="formid-block">
 													<fieldset class="form-group groupLabel">
 														<div>
-															<label for="">Name <span class="text-danger">*</span></label>
+															<label>Firstname <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<input id="name" type="text" class="form-control form-control-sm">
+																<input name="user_firstname" type="text" class="form-control form-control-sm">
 																<div class="invalid-feedback"></div>
 															</div>
 														</div>
 													</fieldset>
 												</div>
 											</div>
+
 											<div class="col-lg-12">
 												<div class="formid-block">
 													<fieldset class="form-group groupLabel">
 														<div>
-															<label for="">Phone <span class="text-danger">*</span></label>
+															<label>Lastname <span class="text-danger">*</span></label>
+															<div class="extInput">
+																<input name="user_lastname" type="text" class="form-control form-control-sm">
+																<div class="invalid-feedback"></div>
+															</div>
+														</div>
+													</fieldset>
+												</div>
+											</div>
+
+											<div class="col-lg-12">
+												<div class="formid-block">
+													<fieldset class="form-group groupLabel">
+														<div>
+															<label>Phone <span class="text-danger">*</span></label>
 															<div class="extInput">
 																<div role="group" class="input-group flex-nowrap input-group-sm">
-																	<div class="input-group-prepend">
-																		<div class="input-group-text">+998</div>
-																	</div>
-																	<input id="phone" type="text" class="form-control form-control-sm">
+																	<input name="user_phone" type="text" class="form-control form-control-sm">
 																</div>
 																<div class="invalid-feedback"></div>
 															</div>
@@ -99,12 +112,15 @@
 													</fieldset>
 												</div>
 											</div>
+
+
 											<div class="col-lg-12">
 												<div class="formid-block">
 													<fieldset class="form-group groupLabel">
-														<div><label>Comment</label>
+														<div>
+															<label>Comment</label>
 															<div class="extInput">
-																<textarea id="comment" wrap="soft" class="form-control form-control-sm"
+																<textarea name="user_comment" wrap="soft" class="form-control form-control-sm"
 																	style="resize: none; overflow-y: scroll; height: 73px;"></textarea>
 																<div class="invalid-feedback"></div>
 															</div>
@@ -119,7 +135,7 @@
 														<div>
 															<label>Select your course <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<select class="custom-select custom-select-sm">
+																<select name="user_select" class="custom-select custom-select-sm">
 																	<option value="Frontend Dasturlash">Frontend Dasturlash</option>
 																	<option value="Python Dasturlash">Python Dasturlash</option>
 																	<option value="SMM">SMM</option>
@@ -135,7 +151,7 @@
 											<div class="col-lg-12">
 												<fieldset class="form-group">
 													<div>
-														<button type="submit" disabled="disabled" class="btn btn-primary btn-sm disabled">
+														<button type="submit" class="btn btn-primary btn-sm">
 															<div>
 																Submit
 															</div>
@@ -143,6 +159,7 @@
 													</div>
 												</fieldset>
 											</div>
+											
 										</div>
 									</form>
 								</div>
