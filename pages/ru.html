@@ -66,7 +66,7 @@
 						<div class="">
 							<div>
 								<div>
-									<form action="" class="">
+									<form id="form">
 										<div class="row align-items-end">
 
 											<div class="col-lg-12">
@@ -75,8 +75,7 @@
 														<div>
 															<label>Имя <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<input name="user__firstname" type="text" class="form-control form-control-sm">
-																<div class="invalid-feedback"></div>
+																<input id="firstname" type="text" class="form-control form-control-sm">
 															</div>
 														</div>
 													</fieldset>
@@ -89,8 +88,7 @@
 														<div>
 															<label>Фамилия <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<input name="user__lastname" type="text" class="form-control form-control-sm">
-																<div class="invalid-feedback"></div>
+																<input id="lastname" type="text" class="form-control form-control-sm">
 															</div>
 														</div>
 													</fieldset>
@@ -104,7 +102,22 @@
 															<label>Телефон <span class="text-danger">*</span></label>
 															<div class="extInput">
 																<div role="group" class="input-group flex-nowrap input-group-sm">
-																	<input name="user_phone" type="text" class="form-control form-control-sm">
+																	<input id="phone" type="text" class="form-control form-control-sm">
+																</div>
+															</div>
+														</div>
+													</fieldset>
+												</div>
+											</div>
+
+											<div class="col-lg-12">
+												<div class="formid-block">
+													<fieldset class="form-group groupLabel">
+														<div>
+															<label>Электронное письмо <span class="text-danger">*</span></label>
+															<div class="extInput">
+																<div role="group" class="input-group flex-nowrap input-group-sm">
+																	<input id="email" type="text" class="form-control form-control-sm">
 																</div>
 																<div class="invalid-feedback"></div>
 															</div>
@@ -119,9 +132,8 @@
 														<div>
 															<label>Коментарий</label>
 															<div class="extInput">
-																<textarea name="user_comment" wrap="soft" class="form-control form-control-sm"
+																<textarea id="comment" wrap="soft" class="form-control form-control-sm"
 																	style="resize: none; overflow-y: scroll; height: 73px;"></textarea>
-																<div class="invalid-feedback"></div>
 															</div>
 														</div>
 													</fieldset>
@@ -132,15 +144,14 @@
 												<div class="formid-block">
 													<fieldset class="form-group groupLabel">
 														<div>
-															<label>Выбери свой курс  <span class="text-danger">*</span></label>
+															<label>Выбери свой курс <span class="text-danger">*</span></label>
 															<div class="extInput">
-																<select name="user_select" class="custom-select custom-select-sm">
-																	<option value="Frontend Dasturlash">Frontend Dasturlash</option>
-																	<option value="Python Dasturlash">Python Dasturlash</option>
+																<select id="select" class="custom-select custom-select-sm">
+																	<option value="Frontend Dasturlash">Frontend</option>
+																	<option value="Python Dasturlash">Python</option>
 																	<option value="SMM">SMM</option>
 																	<option value="Flutter">Flutter</option>
 																</select>
-																<div class="invalid-feedback"></div>
 															</div>
 														</div>
 													</fieldset>
@@ -150,11 +161,7 @@
 											<div class="col-lg-12">
 												<fieldset class="form-group">
 													<div>
-														<button type="submit" class="btn btn-primary btn-sm">
-															<div>
-																Отправить
-															</div>
-														</button>
+														<button type="submit" class="btn btn-primary btn-sm">Отправить</button>
 													</div>
 												</fieldset>
 											</div>
@@ -163,16 +170,21 @@
 									</form>
 								</div>
 							</div>
+
 							<div class="lead-form-footer">
-								<div class="view-footer-page d-flex justify-content-center align-items-center mt-4 mb-5"><span> ©
-									IT-Labs Programming Academy</span></div>
+								<div class="view-footer-page d-flex justify-content-center align-items-center mt-4 mb-5">
+									<span> © IT-Labs Programming Academy</span>
+								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
+
+	<script src="../app.js"></script>
 </body>
 
 </html>

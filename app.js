@@ -14,7 +14,7 @@ form.addEventListener("submit", e => {
 
 	const token = "5011210332:AAGVwqBLsNqvq2h0AtpXeRCAukC8Cgy2MBg"
 	const chat_id ="-607603440"
-	const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}/`
+	const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}`
 
 	console.log(firstname, lastname, phone, email, comment, select);
 
